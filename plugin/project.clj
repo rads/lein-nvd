@@ -23,4 +23,11 @@
       :plugins [
         [lein-codox "0.10.3"]
         [lein-cloverage "1.0.9"]]}}
-  :eval-in-leiningen true)
+  :eval-in-leiningen true
+  :repositories {"confluent" "https://packages.confluent.io/maven/"
+                 "releases" {:url "https://fundingcircle.jfrog.io/fundingcircle/libs-release-local"
+                             :username :env/artifactory_user
+                             :password :env/artifactory_password}
+                 "snapshots" {:url "https://fundingcircle.jfrog.io/fundingcircle/libs-snapshot-local"
+                              :username :env/artifactory_user
+                              :password :env/artifactory_password}})
